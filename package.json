@@ -1,0 +1,39 @@
+{
+  "name": "cordova-resgen",
+  "version": "0.1.1",
+  "author": {
+    "name": "Helix Huang",
+    "email": "huangjianping+github@gmail.com"
+  },
+  "description": "Automatic icon and splash resizing for Cordova",
+  "main": "index.js",
+  "preferGlobal": "true",
+  "directories": {
+    "bin": "./bin"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/helixhuang/cordova-resources.git"
+  },
+  "keywords": [
+    "cordova",
+    "icon",
+    "splash",
+    "resize"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/helixhuang/cordova-resources/issues"
+  },
+  "homepage": "https://github.com/helixhuang/cordova-resources",
+  "dependencies": {
+    "colors": "^0.6.2",
+    "fs-extra": "^0.30.0",
+    "gm": "^1.22.0",
+    "q": "^1.0.1",
+    "underscore": "^1.6.0"
+  }
+}
