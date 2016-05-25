@@ -1,6 +1,6 @@
 {
   "name": "cordova-resgen",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "author": {
     "name": "Helix Huang",
     "email": "huangjianping+github@gmail.com"
@@ -10,9 +10,6 @@
   "preferGlobal": "true",
   "directories": {
     "bin": "./bin"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
