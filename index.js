@@ -234,6 +234,7 @@ var generateSplash = function (platform, splash) {
   gm(srcPath)
     .resize(Math.max(splash.width, splash.height))
     .crop(splash.width, splash.height,x,y)
+    .quality(50)
     .write(dstPath, function(err){
       if (err) {
         deferred.reject(err);
