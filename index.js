@@ -30,8 +30,10 @@ var getPlatforms = function () {
     icons : [
       { name : 'icon-40.png',       size : 40  },
       { name : 'icon-40@2x.png',    size : 80  },
+      { name : 'icon-40@3x.png',    size : 120 },
       { name : 'icon-50.png',       size : 50  },
       { name : 'icon-50@2x.png',    size : 100 },
+      { name : 'icon-50@3x.png',    size : 120 },
       { name : 'icon-60.png',       size : 60  },
       { name : 'icon-60@2x.png',    size : 120 },
       { name : 'icon-60@3x.png',    size : 180 },
@@ -44,7 +46,8 @@ var getPlatforms = function () {
       { name : 'icon-small@3x.png', size : 87  },
       { name : 'icon.png',          size : 57  },
       { name : 'icon@2x.png',       size : 114 },
-      { name : 'icon-83.5@2x.png',  size : 167 }
+      { name : 'icon-83.5@2x.png',  size : 167 },
+      { name : 'icon-1024.png',     size : 1024}
     ],
     splashPath : 'resources/ios/splash/',
     splashes : [
@@ -58,8 +61,10 @@ var getPlatforms = function () {
       // iPad
       { name: 'Default-Portrait~ipad.png',     width: 768,  height: 1024 },
       { name: 'Default-Portrait@2x~ipad.png',  width: 1536, height: 2048 },
+      { name: 'Default-Portrait@~ipadpro.png', width: 2048, height: 2732 },
       { name: 'Default-Landscape~ipad.png',    width: 1024, height: 768  },
-      { name: 'Default-Landscape@2x~ipad.png', width: 2048, height: 1536 }
+      { name: 'Default-Landscape@2x~ipad.png', width: 2048, height: 1536 },
+      { name: 'Default-Landscape@~ipadpro.png', width: 2732, height: 2048 }
     ]
   });
   platforms.push({
@@ -234,7 +239,6 @@ var generateSplash = function (platform, splash) {
   gm(srcPath)
     .resize(Math.max(splash.width, splash.height))
     .crop(splash.width, splash.height,x,y)
-    .quality(50)
     .write(dstPath, function(err){
       if (err) {
         deferred.reject(err);
