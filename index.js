@@ -14,6 +14,10 @@ const optionDefinitions = [
 
 const options = commandLineArgs(optionDefinitions);
 
+var isEmpty = (object) => {
+  return JSON.stringify(object) == "{}";
+}
+
 /**
  * @var {Object} settings - names of the config file and of the icon image
  * TODO: add option to get these values as CLI params
@@ -347,11 +351,11 @@ var generateResources = function (platforms) {
   var all = [];
   _(platforms).where({ isAdded : true }).forEach(function (platform) {
     sequence = sequence.then(function () {
-      if(!options || options.icon) {
+      if(isEmpty(options) || options.icon) {
         return generateIconsForPlatform(platform);
       }
     }).then(function () {
-      if(!options || options.splash) {
+      if(isEmpty(options) || options.splash) {
         return generateSplashForPlatform(platform);
       }
     });
