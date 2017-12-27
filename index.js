@@ -5,6 +5,15 @@ var colors = require('colors');
 var _      = require('underscore');
 var Q      = require('q');
 
+const commandLineArgs = require('command-line-args')
+ 
+const optionDefinitions = [
+  { name: 'splash', alias: 's', type: Boolean },
+  { name: 'icon', alias: 'i', type: Boolean, }
+]
+
+const options = commandLineArgs(optionDefinitions);
+
 /**
  * @var {Object} settings - names of the config file and of the icon image
  * TODO: add option to get these values as CLI params
@@ -338,9 +347,13 @@ var generateResources = function (platforms) {
   var all = [];
   _(platforms).where({ isAdded : true }).forEach(function (platform) {
     sequence = sequence.then(function () {
-      return generateIconsForPlatform(platform);
+      if(!options || options.icon) {
+        return generateIconsForPlatform(platform);
+      }
     }).then(function () {
-      return generateSplashForPlatform(platform);
+      if(!options || options.splash) {
+        return generateSplashForPlatform(platform);
+      }
     });
     all.push(sequence);
   });
