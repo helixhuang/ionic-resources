@@ -28,6 +28,7 @@
   "homepage": "https://github.com/helixhuang/cordova-resources",
   "dependencies": {
     "colors": "^0.6.2",
+    "command-line-args": "^4.0.7",
     "fs-extra": "^0.30.0",
     "gm": "^1.23.0",
     "q": "^1.0.1",
