@@ -1,4 +1,4 @@
-# cordova-splash
+# ionic-resources
 
 [![Gitter](https://badges.gitter.im/helixhuang/ionic-resources.svg)](https://gitter.im/helixhuang/ionic-resources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
