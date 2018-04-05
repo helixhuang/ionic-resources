@@ -8,7 +8,7 @@ Automatic splash screen and icon generator for Cordova(Ionic). Create a splash s
 
 ### Installation
 
-    $ sudo npm install cordova-resgen -g
+    $ sudo npm install ionic-resources -g
 
 ### Requirements
 
@@ -20,7 +20,11 @@ Automatic splash screen and icon generator for Cordova(Ionic). Create a splash s
 
 Create a `splash.png` and a 'icon.png' file in the root folder of your cordova project and run:
 
-    $ cordova-resgen
+    $ ionic-resources
+
+    $ ionic-resources --icon
+
+    $ ionic-resources --splash
 
 
 ### License
