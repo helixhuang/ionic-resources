@@ -6,7 +6,7 @@ var _      = require('underscore');
 var Q      = require('q');
 
 const commandLineArgs = require('command-line-args')
- 
+
 const optionDefinitions = [
   { name: 'splash', alias: 's', type: Boolean },
   { name: 'icon', alias: 'i', type: Boolean, }
@@ -41,6 +41,7 @@ var getPlatforms = function () {
     isAdded : fs.existsSync('platforms/ios'),
     iconsPath : 'resources/ios/icon/',
     icons : [
+      { name : 'icon-20.png',       size : 20  },
       { name : 'icon-40.png',       size : 40  },
       { name : 'icon-40@2x.png',    size : 80  },
       { name : 'icon-40@3x.png',    size : 120 },
@@ -79,7 +80,9 @@ var getPlatforms = function () {
       { name: 'Default-Portrait@~ipadpro.png', width: 2048, height: 2732 },
       { name: 'Default-Landscape~ipad.png',    width: 1024, height: 768  },
       { name: 'Default-Landscape@2x~ipad.png', width: 2048, height: 1536 },
-      { name: 'Default-Landscape@~ipadpro.png', width: 2732, height: 2048 }
+      { name: 'Default-Landscape@~ipadpro.png', width: 2732, height: 2048 },
+      // Universal
+      { name: 'Default@2x~universal~anyany.png',   width: 2732, height: 2732 }
     ]
   });
   platforms.push({
@@ -443,4 +446,3 @@ atLeastOnePlatformFound()
   }).then(function () {
     console.log('');
   });
-
