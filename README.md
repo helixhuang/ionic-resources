@@ -2,6 +2,8 @@
 
 [![Gitter](https://badges.gitter.im/helixhuang/ionic-resources.svg)](https://gitter.im/helixhuang/ionic-resources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
+[![Join the chat at https://gitter.im/helixhuang/ionic-resources](https://badges.gitter.im/helixhuang/ionic-resources.svg)](https://gitter.im/helixhuang/ionic-resources?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Base on [https://github.com/AlexDisler/cordova-splash](https://github.com/AlexDisler/cordova-splash) and [https://github.com/AlexDisler/cordova-icon](https://github.com/AlexDisler/cordova-icon)
 
 Automatic splash screen and icon generator for Cordova(Ionic). Create a splash screen (2732x2732) and an icon (1024x1024) once in the resources folder of your Cordova project and use cordova-resgen to automatically crop and copy it for all the platforms your project supports (currenty works with iOS, Android and Windows 10).
